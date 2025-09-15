@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: akashplay-pending-pod-default
+  namespace: default
+spec:
+  containers:
+    - name: busybox
+      image: busybox
+      command: ["sleep", "3600"]
+      resources:
+        requests:
+          cpu: "100"   # too high, pod will stay Pending
