@@ -1,4 +1,4 @@
-clusterName: "akashplay-minimal"
+clusterName: "akashplay"
 
 # For agents, point to the deployment service
 otelCollectorEndpoint: "akash-k8s-infra-otel-deployment.signoz.svc.cluster.local:4317"
@@ -25,15 +25,6 @@ otelAgent:
 # OtelDeployment configuration  
 otelDeployment:
   enabled: true
-  
-  # Override the endpoint ONLY for the deployment
-  # additionalEnvs:
-  #   OTEL_EXPORTER_OTLP_ENDPOINT:
-  #     value: "ingest.in.signoz.cloud:4317"  # This should point to SigNoz Cloud
-  #   SIGNOZ_API_KEY:
-  #     value: "NocI-rb0fGk8GnqOiQE0beyiv7JFTNWZe9yp"
-  #   OTEL_EXPORTER_OTLP_INSECURE:
-  #     value: "false"  # SigNoz Cloud uses TLS
 
   additionalEnvs:
     OTEL_EXPORTER_OTLP_ENDPOINT:
